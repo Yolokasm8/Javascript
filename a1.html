@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Articulos</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/estilos.css">
+</head>
+<style>
+    body {
+    background-color: lightgreen;
+	background-image: url('images/1.jpg');
+  	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%; }
+</style>
+<body onload="ciclo();">
+		
+	<script type="text/javascript">
+		var i=prompt("¿Cuántos articulos desea crear?");
+			var n=1;
+			if(i<=8){
+				while(n<=i){
+					document.write('<article id="caja" style="background-color:#10375c">'+'<FONT COLOR="#f3c623">Caja '+n+'</FONT>'+'<article>');
+					n++;
+				}
+			}
+			if(i>=9){
+				while(n<=i){
+					document.write('<article id="caja1" style="background-color:#f3c623">'+'<FONT COLOR="#10375c">Caja '+n+'</FONT>'+'<article>');
+					n++;
+				}
+	
+			}
+	</script>
+<style type="text/css">
+		#caja1{
+			
+  			display: inline-flex;
+		}
+	</style>
+</body>
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/util.js"></script>
+</html>

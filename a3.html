@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Suma</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/estilos.css">
+</head>
+<style>
+    body {
+    background-color: lightgreen;
+	background-image: url('images/3.jpg');
+  	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%; }
+</style>
+<body class="text-center">
+	<label>De click en "Iniciar" para sumar</label><br>
+	<label>Para terminar la suma ingrese '0' o un número negativo</label><br>
+
+<button onclick="Suma();">Iniciar</button>
+
+<p id="demo"></p>
+
+<script>
+function Suma(){
+  var x=0;
+  do{
+  	var n =parseInt(prompt("Ingrese un número a sumar (Se agregaran consecutivamente)", 0)); 
+  	if (n>=1) {
+  		var x=x+n;
+  	}
+  	else{
+  		break;
+  	}
+  	
+  }
+  while (n >=1) {
+  	
+  }
+  document.getElementById("demo").innerHTML="El total es: "+x;
+}
+</script>
+	
+</body>
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/util.js"></script>
+</html>

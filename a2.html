@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Voto</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/estilos.css">
+</head>
+<style>
+    body {
+    background-color: lightgreen;
+	background-image: url('images/2.webp');
+  	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%; }
+</style>
+<body class="text-center">
+	
+	<form id="vote">
+		<label>Apellido</label>
+		<input name="Apellido" type="text"/><br>
+		<label>Nombre</label>
+		<input name="Nombre" type="text"/><br>
+		<label>¿De qué sección de la ciudad es?</label>
+		<select name="zona">
+			    <option value=""></option>
+				<option value="1">Norte</option>
+				<option value="2">Centro</option>
+				<option value="3">Sur</option>	
+			</select>
+			<input type="button" name="Votar" value="Votar" onclick="sw(this.form);">
+	</form><br>
+	<article id="mensaje"></article>
+	<script type="text/javascript">
+		function sw (vote) {
+			var A=vote.Apellido.value;
+			var N=vote.Nombre.value;
+			var x=parseInt(vote.zona.value);
+			switch (x) {
+				case 1 :
+				document.getElementById("mensaje").innerHTML="Zona norte, gracias por votar "+N+" "+A+"!";
+					
+					break;
+
+					case 2 :
+					document.getElementById("mensaje").innerHTML=" Zona centro, gracias por su voto "+N+" "+A+"!";
+					
+					break;
+
+					case 3 :
+					document.getElementById("mensaje").innerHTML="Zona sur, la mejor de toda la ciudad, gracias por votar "+N+" "+A+"!";
+					
+					break;
+				default:
+				window.alert("No ha seleccionado la zona");
+
+					break;
+			}
+		}
+	</script>
+
+	
+</body>
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/util.js"></script>
+</html>
